@@ -14,7 +14,7 @@ showClock();
 setInterval("showClock()", 1000);
 
 function showClock(){
-    var thisDay = new Date();
+    var thisDay = new Date("May 19, 2018 9:31:27");
     var localDate = thisDay.toLocaleDateString();
     var localTime = thisDay.toLocaleTimeString();
 
@@ -31,7 +31,7 @@ function showClock(){
     document.getElementById("dLeft").textContent = Math.floor(days);
     document.getElementById("hLeft").textContent = Math.floor(hrs);
     document.getElementById("mLeft").textContent = Math.floor(mins);
-    document.getElementById("sLeft").textContent = Math.floor(secs);
+    document.getElementById("sLeft").textContent = Math.ceil(secs);
 }
 
 function nextJuly4(currentDate) {
